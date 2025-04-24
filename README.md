@@ -72,7 +72,7 @@
    ping 192.168.1.222
    ```
 
-   ![1745466801701](C:\Git\.ssh\雷达N301-P\image\1745466801701.jpg)
+   ![1745466801701](https://gitee.com/JiangPeng-57/images/raw/master/1745466801701.jpg)
 
 2. 使用tcpdump查看雷达发送数据包情况，如果显示雷达发送到目的端数据包为1206个字节，则表示雷达数据发送正常。（eth1为有线连接设备名）
 
@@ -80,7 +80,7 @@
    sudo tcpdump -ni eth1
    ```
 
-   ![1745467808066](C:\Git\.ssh\雷达N301-P\image\1745467808066.jpg)
+   ![1745467808066](https://gitee.com/JiangPeng-57/images/raw/master/1745467808066.jpg)
 
    **注**：如果显示雷达发送到目的端数据包为28个字节，则为雷达数据传不到中控，原因可能为
 
@@ -97,19 +97,19 @@
 
    **注**：这里我把eth1的ip改为了192.168.1.102，并使用tcpdump进行抓包，也可接收到雷达数据，因为它们此刻处于一个局域网。
 
-   ![1745468478802](C:\Git\.ssh\雷达N301-P\image\1745468478802.jpg)
+   ![1745468478802](https://gitee.com/JiangPeng-57/images/raw/master/1745468478802.jpg)
 
 4. 打开demo文件夹中的main.cpp和main_PCL.cpp，把以下ip和端口修改为步骤3中雷达pi、端口和中控ip、端口
-   <img src="C:\Git\.ssh\雷达N301-P\image\1745470995904.jpg" alt="1745470995904"  />
+   ![1745470995904](https://gitee.com/JiangPeng-57/images/raw/master/1745470995904.jpg)
 
-   <img src="C:\Git\.ssh\雷达N301-P\image\1745471099012.jpg" alt="1745471099012"  />
+   ![1745471099012](https://gitee.com/JiangPeng-57/images/raw/master/1745471099012.jpg)
 
 5. 按3.1.2编译和运行步骤重新编译运行，下图为执行./demo_viewer后的可视化结果图，蓝色点为检测到的障碍物。
-   ![d3be008acac1a7334d2640ac253a590](C:\Git\.ssh\雷达N301-P\image\d3be008acac1a7334d2640ac253a590.png)
+   ![d3be008acac1a7334d2640ac253a590](https://gitee.com/JiangPeng-57/images/raw/master/d3be008acac1a7334d2640ac253a590.png)
 
    注：如果输出为Failed to bind socket，可能是端口2368被占
 
-   ![1745472075493](C:\Users\JP\Documents\WeChat Files\wxid_6r7ibb54uyk922\FileStorage\Temp\1745472075493.jpg)
+   ![1745472075493](https://gitee.com/JiangPeng-57/images/raw/master/1745472075493.jpg)
 
    使用lsof命令查出占用2368端口的进程，并使用kill命令进行消灭
 
